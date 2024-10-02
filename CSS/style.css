@@ -1,0 +1,281 @@
+@import url('https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,100..900;1,100..900&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,100..900;1,100..900&family=Roboto:ital,wght@0,100;0,300;0,400;0,500;0,700;0,900;1,100;1,300;1,400;1,500;1,700;1,900&display=swap');
+:root {
+    --color-primario: #f63f53;
+    --grey-text: #5E5E5E;
+}
+
+body {
+    margin: 0;
+    font-family: "Montserrat", sans-serif;
+    font-optical-sizing: auto;
+    font-weight: 400;
+    font-style: normal;
+}
+
+.grey {
+    background: #f7f7f7;
+}
+.title {
+    padding: 50px 0;
+}
+.title h1 {
+    margin: 5px;
+    text-align: center;
+    font-size: 16px;
+    font-weight: 600;
+    color: var(--color-primario);
+}
+.title .text-title {
+    margin: 10px;
+    text-align: center;
+    font-size: 36px;
+    font-weight: 400;
+}
+.title p .destacado{
+    font-weight: 600;
+}
+.title .line {
+    margin: 0 auto;
+    width: 50px;
+    height: 1px;
+    background-color: var( --color-primario);
+}
+.image-gallery {
+    margin: auto;
+    display: flex;
+    flex-direction: column;
+    gap: 15px;
+    max-width: 1200px;
+}
+.gallery-row {
+    display: flex;
+    gap: 25px;
+}
+.gallery-row .small-image {
+    flex: 1 1 auto;
+    position: relative;
+    overflow: clip;
+    transition: all 1s;
+}
+.gallery-row .big-image {
+    flex: 2 1 auto;
+    position: relative;
+    overflow: clip;
+    transition: all 1s;
+}
+.gallery-row .small-image:hover .information {
+    top:0;
+}
+.gallery-row .big-image:hover .information {
+    top:0;
+}
+.gallery-row img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+}
+
+.gallery-row .information {
+    transition: all 1s;
+    width: 100%;
+    position: absolute;
+    height: 100%;
+    z-index: 1;
+    box-sizing: border-box;
+    background-clip: content-box;
+    border: 10px solid transparent;
+    background-color: rgba(255, 255, 255, 0.9);
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    top: 100%;
+}
+.gallery-row .information .information-title{
+    font-weight: 600;
+    margin: 5px;
+}
+.gallery-row .information .information-description{
+    font-size: 12px;
+    font-weight: 500;
+    margin: 5px;
+}
+.gallery-row .information i{
+    font-size: 16px;
+    color: white;
+    background-color: var(--color-primario);
+    padding: 10px;
+    border-radius: 50%;
+    margin: 5px;
+}
+
+.persons {
+    display: flex;
+    max-width: 1200px;
+    margin: auto;
+    gap: 25px;
+}
+.person{
+    display: flex;
+    flex-direction: column;
+
+}
+.person:hover img{
+    filter: grayscale(0%);
+}
+.person .name-rol {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    margin: 25px 0 15px 0 ;
+}
+.person .name-rol p{
+    margin: 0;
+}
+
+.person .name-rol .name{
+    font-weight: bold;
+    font-size: 18px;
+}
+.person .name-rol .rol{
+    margin: 0;
+    font-weight: 500;
+    color: gray;
+    font-size: 12px;
+}
+.person img {
+    transition: all 500ms linear;
+    width: 100%;
+    object-fit: cover;
+    filter: grayscale(100%);
+}
+.grey-line {
+    width: 100%;
+    height: 1px;
+    background-color: rgba(144, 144, 144, 0.5);
+}
+.social-media {
+    margin: 15px auto;
+    display: flex;
+    gap: 15px;
+    color: rgba(144, 144, 144);
+}
+#prices {
+    margin: 20px 0 0 0;
+    padding: 120px 0 30px 0;
+}
+.prices {
+    display: flex;
+    max-width: 1200px;
+    margin: 80px auto 0 auto;
+    width: 100%;
+    justify-content: space-around;
+    gap:25px;
+    background-color: #f7f7f7;
+}
+.price{
+    background-color: white;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    flex-grow: 1;
+    padding: 30px 50px;
+    transition: all 500ms;
+}
+.price:hover {
+    box-shadow: 0 8px 40px 1px rgba(0,0,0,0.1);
+    scale: 1.05;
+}
+.price i {
+    margin-top: 5px;
+    font-size: 42px;
+    color: #D6D6D6;
+}
+.price .line {
+    width: 100%;
+    height: 1px;
+    background-color: #D6D6D6;
+}
+.cost {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 2px;
+}
+.cost .number {
+    font-size: 64px;
+    font-weight: 700;
+}
+.cost .dollar {
+    font-weight: 700;
+    margin-top: 30px;
+}
+.cost .text {
+    color: #f63f53;
+    font-weight: 600;
+    margin-top: 50px;
+}
+.price .caracteristicas {
+    font-family: "Roboto", sans-serif;
+    text-align: center;
+    color: #797979;
+    margin: 25px 0;
+}
+.price .boton {
+    text-decoration: none;
+    color: black;
+    font-weight: 600;
+    padding: 15px;
+    border: black 2px solid;
+}
+.news-section {
+    color: var(--grey-text);
+    max-width: 1200px;
+    margin: 20px auto 50px auto;
+    display: flex;
+    gap: 25px;
+}
+.news {
+    box-shadow: 0 8px 40px 1px rgba(0,0,0,0.1);
+    overflow: hidden;
+}
+
+.news img{
+    width: 100%;
+    object-fit: cover;
+    transition: all 500ms;
+}
+.news:hover img{
+    scale: 1.10;
+}
+
+.news-content {
+    margin: 25px;
+}
+.news-content .subtitle {
+    margin:0 ;
+}
+.news-content .news-title{
+    font-size: 18px;
+    margin: 5px 0 10px 0;
+    font-weight: 600;
+}
+.news-content .news-author{
+    font-size: 12px;
+    margin: 12px 0 20px 0;
+}
+.news-content .news-author .author{
+    color: var(--color-primario);
+    font-weight: 600;
+}
+.news-content .text {
+    font-family: "Roboto", sans-serif;
+    line-height: 1.6;
+    margin: 20px 0 30px 0;
+}
+.news-content .read-more{
+    text-decoration-line: underline;
+    color: black;
+}
